@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Resume from "./components/Resume";
 
 function App() {
 
@@ -20,20 +21,24 @@ function App() {
     },
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [contactSelected, setContactSelected] = useState(false);
-  const [aboutSelected, setAboutSelected] = useState(false);
+  const [currentCategory, setCurrentCategory] = useState(categories[0].name);
+
 
 
   return (
-    <div className="App bg-amber-400">
-      <Header categories={categories}/> 
+    <div className="h-screen App bg-amber-400">
+      <Header 
+        categories={categories}
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+      /> 
       <main className="">
-        {<About />}
-        <Gallery />
-        <Contact />
-        <Footer />
+        {currentCategory === 'about' && <About />}
+        {currentCategory === 'projects' && <Gallery />}
+        {currentCategory === 'contact' &&<Contact />}
+        {currentCategory === 'resume' &&<Resume />}
       </main>
+      <Footer />
     </div>
   );
 }
