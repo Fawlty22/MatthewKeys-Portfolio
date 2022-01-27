@@ -9,25 +9,25 @@ function App() {
 
   const [categories] = useState([
     {
-      name: "projects",
-      description:
-        "The projects I've completed during this cohort.",
+      name: 'projects'
     },
-    { name: "about me", description: "A section about me." },
-    { name: "resume", description: "My resume." },
     {
-      name: "contact",
-      description: "Contact me.",
+      name: 'about'
+    },{
+      name: 'resume'
+    },{
+      name: 'contact'
     },
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
+  const [contactSelected, setContactSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(false);
 
 
   return (
     <div className="App bg-amber-400">
-      <Header /> 
+      <Header categories={categories}/> 
       <main className="">
         {<About />}
         <Gallery />

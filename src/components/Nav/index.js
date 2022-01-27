@@ -1,30 +1,20 @@
 import React from 'react';
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
-export default function Nav() {
+export default function Nav({ categories }) {
+
   return (
   <div className=''>
       <nav className=''>
           <ul className='flex justify-between'>
-              <li className='p-10'>
-                  <a href='/'>
-                    About Me
-                  </a>
+            {categories.map((category) => (
+              <li className='p-10' key={category.name}>
+                <a href='/' >
+                {capitalizeFirstLetter(category.name)}
+                </a>
               </li>
-              <li className='p-10'>
-                  <a href='/'>
-                    Projects
-                  </a>
-              </li>
-              <li className='p-10'>
-                  <a href='/'>
-                    Resume
-                  </a>
-              </li>
-              <li className='p-10'>
-                  <a href='/'>
-                    Contact
-                  </a>
-              </li>
+            ))}
+             
           </ul>
       </nav>
   </div>
