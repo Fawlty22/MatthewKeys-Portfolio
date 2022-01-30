@@ -26,19 +26,27 @@ function App() {
 
 
   return (
-    <div className="h-screen App bg-amber-400">
+    <div className="h-fit App bg-slate-300">
       <Header 
         categories={categories}
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       /> 
-      <main className="">
-        {currentCategory === 'about' && <About />}
+      <main className="h-full">
+        {currentCategory === 'about' &&   
+        <About 
+          categories={categories}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+          />
+        }
         {currentCategory === 'projects' && <Gallery />}
         {currentCategory === 'contact' &&<Contact />}
         {currentCategory === 'resume' &&<Resume />}
+        
+      
       </main>
-      <Footer />
+     <Footer />
     </div>
   );
 }

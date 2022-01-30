@@ -1,9 +1,11 @@
 import React from 'react';
 
 export default function Footer() {
-  return <div className='bg-gray-400 h-full flex justify-center align-center'>
-      <h1 className='p-10'> 
-          Footer Text
-      </h1>
+ 
+  return <div className='bg-gray-400 h-1/6 flex justify-center align-center'>
+      
+      <a href="#" className="m-2 fa fa-github"></a>
+      <a href="#" className="m-2 fa fa-linkedin"></a>
+
   </div>;
 }
