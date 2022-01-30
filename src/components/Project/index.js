@@ -1,34 +1,18 @@
 import React from "react";
 
-export default function Project() {
-
-  function getProjectsArray () {
-    fetch('https://github.com/users/fawlty22/repos')
-      .then(function (response) {
-        let parsedData = response.json()
-        console.log(parsedData)
-        return parsedData
-      } 
-      )}
-
-      // getProjectsArray()
+export default function Project({ name, link }) {
 
 
   return (
-    <div className=" max-w-sm h-1/3 w-1/2 overflow-hidden shadow-lg bg-blue-400 border border-white ">
-  
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
+<div className=" rounded overflow-hidden border w-full lg:w-6/12 md:w-6/12 bg-black mx-3 md:mx-0 lg:mx-0">
+    <div className="w-full flex justify-between p-3">
+      <div className="flex">
+        <span className="pt-1 ml-2 font-bold text-sm">{name}</span>
+      </div>
+      <span className="px-2 hover:bg-gray-300 cursor-pointer rounded">{link}</span>
+    </div>
+    <img className="w-full bg-cover" src="https://3.bp.blogspot.com/-Chu20FDi9Ek/WoOD-ehQ29I/AAAAAAAAK7U/mc4CAiTYOY8VzOFzBKdR52aLRiyjqu0MwCLcBGAs/s1600/DSC04596%2B%25282%2529.JPG"/>
   </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div>
 
   );
 }
