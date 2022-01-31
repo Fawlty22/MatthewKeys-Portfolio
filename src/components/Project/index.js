@@ -4,7 +4,7 @@ export default function Project({ name, link }) {
 
 
   return (
-<a href={link} target="blank" className=" bg-red border border-gray overflow-hidden hover:opacity-50  w-full lg:w-6/12 md:w-6/12 bg-black mx-3 md:mx-0 lg:mx-0">
+<a href={link} target="blank" className=" bg-lightred border border-gray overflow-hidden hover:opacity-50  w-full lg:w-6/12 md:w-6/12 mx-3 md:mx-0 lg:mx-0">
     <div className="w-full flex justify-between p-3">
       <div className="text-navy flex">
         <span className="pt-1 ml-2 font-bold text-sm ">{name}</span>

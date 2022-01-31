@@ -39,7 +39,7 @@ import Project from '../Project';
             Here is a selection of projects I've built during my bootcamp.
           </p>
         </div>
-        <div className="flex flex-wrap w-full justify-center bg-foam">
+        <div className="flex flex-wrap w-full justify-center bg-navy">
           {galleryLoading && <h2 className='text-white font-medium'>LOADING... </h2>}
         {projectFetch.map((repo) => (
           reposWeLike.includes(repo.name) && 
