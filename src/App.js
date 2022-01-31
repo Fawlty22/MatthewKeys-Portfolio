@@ -26,7 +26,7 @@ function App() {
 
 
   return (
-    <div className="h-fit App bg-slate-300">
+    <div className="h-screen App bg-gray">
       <Header 
         categories={categories}
         currentCategory={currentCategory}
