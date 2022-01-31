@@ -6,13 +6,17 @@ import Project from '../Project';
  function Gallery() {
 
   const [projectFetch, setProjectFetch] = useState([]);
+  const [galleryLoading, setGalleryLoading ] = useState(true)
 
   useEffect(()=> {
     fetch('https://api.github.com/users/fawlty22/repos')
         .then(function (response) {
           return response.json()
         })
-        .then(projectFetchData => setProjectFetch(projectFetchData))
+        .then(projectFetchData => {
+          setProjectFetch(projectFetchData)
+          setGalleryLoading(false)
+        })
   }, [])
    
   // console.log(data)
@@ -31,11 +35,11 @@ import Project from '../Project';
             Projects I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Here is the complete collection of projects I've built during my bootcamp.
+            Here is a selection of projects I've built during my bootcamp.
           </p>
         </div>
         <div className="flex flex-wrap w-full justify-center">
-          
+          {galleryLoading && <h2 className='text-white font-medium'>LOADING... </h2>}
         {projectFetch.map((repo) => (
           reposWeLike.includes(repo.name) && 
          <Project 
@@ -45,15 +49,10 @@ import Project from '../Project';
             />
         )
         )}
-        
-          
-        
-      
         </div>
       </div>
     </section>
   );
-
 }
 
 export default Gallery;
