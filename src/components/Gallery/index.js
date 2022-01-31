@@ -5,17 +5,22 @@ import Project from '../Project';
 
  function Gallery() {
 
-  const [data, setData] = useState([]);
+  const [projectFetch, setProjectFetch] = useState([]);
 
   useEffect(()=> {
     fetch('https://api.github.com/users/fawlty22/repos')
         .then(function (response) {
           return response.json()
         })
-        .then(data => setData(data))
+        .then(projectFetchData => setProjectFetch(projectFetchData))
   }, [])
    
   // console.log(data)
+
+  // let reposWeLike = [ 'Chatterstorm', 'Pawgers', 'FlightPlan', 'photo-port', 'MatthewKeys', '']
+  let reposWeLike = [ 'Pawgers', 'FlightPlan']
+
+
 
   return (
     <section id="projects" className="text-white bg-gray-900 body-font h-fit">
@@ -31,12 +36,17 @@ import Project from '../Project';
         </div>
         <div className="flex flex-wrap w-full justify-center">
           
-        {data.map((eachRepo) => (
-          <Project 
-            name={eachRepo.name}
-            link={eachRepo.html_url}
+        {projectFetch.map((repo) => (
+          reposWeLike.includes(repo.name) && 
+         <Project 
+            name={repo.name}
+            link={repo.html_url}
+            key={repo.name}
             />
-        ))}
+        )
+        )}
+        
+          
         
       
         </div>

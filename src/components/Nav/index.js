@@ -9,7 +9,7 @@ export default function Nav({ categories, currentCategory, setCurrentCategory })
           <ul className='flex justify-between'>
             {categories.map((category) => (
             
-              <li  className='py-10 px-5' key={category.name}>
+              <li  className='py-10 px-5 ' key={category.name}>
                 <a className='py-5 px-5' onClick={() => setCurrentCategory(category.name)} href='#'  >
                 {capitalizeFirstLetter(category.name)}
                 </a>
