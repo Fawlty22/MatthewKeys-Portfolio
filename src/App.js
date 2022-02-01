@@ -26,13 +26,13 @@ function App() {
 
 
   return (
-    <div className="h-screen App bg-gray">
+    <div id="app" className="bg-gray h-fit ">
       <Header 
         categories={categories}
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       /> 
-      <main className="h-full">
+      <main className=" bg-gray">
         {currentCategory === 'about' &&   
         <About 
           categories={categories}

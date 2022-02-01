@@ -2,10 +2,11 @@ import React from 'react';
 
 export default function Footer() {
  
-  return <div className='bg-foam h-1/6 flex justify-center align-center'>
-      
-      <a href="#" className="m-2 fa fa-github"></a>
-      <a href="#" className="m-2 fa fa-linkedin"></a>
+  return <footer className='bg-foam h-20 flex justify-center'>
 
-  </div>;
+      <div id="icon-container" className="h-full flex w-1/4 justify-around items-center">
+        <a href="#" alt="icon" className="m-2 fa fa-2x fa-linkedin"></a>
+        <a href="#" alt="icon" className="m-2 fa fa-2x fa-github"></a>
+      </div>
+  </footer>;
 }

@@ -27,8 +27,7 @@ import Project from '../Project';
 
 
   return (
-    <section id="projects" className="text-white bg-gray
-     body-font h-fit">
+    <section id="projects" className="text-white bg-gray body-font h-full">
       <div className="container px-5 py-10 mx-auto text-center text-white lg:px-40">
         <div className="flex flex-col border border-red bg-navy rounded w-full mb-20">
           
