@@ -26,7 +26,7 @@ function App() {
 
 
   return (
-    <div id="app" className="bg-gray h-fit ">
+    <div id="app" className="bg-beige h-fit ">
       <Header 
         categories={categories}
         currentCategory={currentCategory}

@@ -29,17 +29,17 @@ import Project from '../Project';
   return (
     <section id="projects" className="text-white bg-gray body-font h-full">
       <div className="container px-5 py-10 mx-auto text-center text-white lg:px-40">
-        <div className="flex flex-col border border-red bg-navy rounded w-full mb-20">
+        <div className="flex flex-col border border-charcoal bg-sky rounded w-full mb-20">
           
-          <h1 className="sm:text-4xl text-3xl font-bold text-white  title-font mb-4">
+          <h1 className="sm:text-4xl text-3xl font-bold text-charcoal  title-font mb-4">
             Projects I've Built
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed font-semibold text-white text-base">
+          <p className="lg:w-2/3 mx-auto leading-relaxed font-semibold text-charcoal text-base">
             Here is a selection of projects I've built during my bootcamp.
           </p>
         </div>
-        <div className="flex flex-wrap w-full justify-center bg-navy">
-          {galleryLoading && <h2 className='text-white font-medium'>LOADING... </h2>}
+        <div className="flex flex-wrap w-full justify-center bg-charcoal">
+          {galleryLoading && <h2 className='text-sky font-medium'>LOADING... </h2>}
         {projectFetch.map((repo) => (
           reposWeLike.includes(repo.name) && 
          <Project 

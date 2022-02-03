@@ -7,14 +7,15 @@ module.exports = {
     extend: {},
     
     colors: {
-      'lightred': '#C7493A',
-      'red': '#A43425',
-      'foam': '#699775',
-      'brown': '#917163',
-      'tan': '#AD8074',
-      'gray': '#39393b',
       'navy': '#2b2d3d',
-      'white': '#Ececf7'
+      'white': '#Ececf7',
+      'beige': '#b0a295',
+      'charcoal': '#5c5c61',
+      'sky': '#7395ad',
+      'royal': '#557a95',
+      'lightgray': '#938e94',
+      'white': '#Ececf7',
+
     }
   },
   plugins: [],
