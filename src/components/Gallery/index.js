@@ -23,7 +23,7 @@ import { Redirect } from 'react-router-dom'
   // console.log(data)
 
   // let reposWeLike = [ 'Chatterstorm', 'Pawgers', 'FlightPlan', 'photo-port', 'MatthewKeys', '']
-  let reposWeLike = [ 'Pawgers', 'FlightPlan', 'DeepThoughts', 'PhotoPort']
+  let reposWeLike = [ 'Pawgers', 'FlightPlan', 'DeepThoughts', 'PhotoPort', 'Shop-Shop', 'Chatterstorm' ]
 
 
 
@@ -48,18 +48,11 @@ import { Redirect } from 'react-router-dom'
          <Project 
             name={repo.name}
             link={repo.html_url}
+            homepage={repo.homepage}
             key={repo.name}
             />
         )
         )}
-        <Project 
-            name={'PhotoPort'}
-            link={'repo.html_url'}>
-        </Project>
-        <Project 
-            name={'PhotoPort'}
-            link={'repo.html_url'}>
-        </Project>
         </div>
       </div>
     </section>
