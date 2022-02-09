@@ -1,5 +1,6 @@
 import React from 'react';
 import { capitalizeFirstLetter } from "../../utils/helpers";
+import { Link } from "react-router-dom";
 
 export default function Nav({ categories, currentCategory, setCurrentCategory }) {
 
@@ -10,9 +11,9 @@ export default function Nav({ categories, currentCategory, setCurrentCategory })
             {categories.map((category) => (
             
               <li  className='py-10 px-5' key={category.name}>
-                <a alt="link" href="/" className='py-5 px-5 hover:bg-lightgray hover:text-royal rounded' onClick={() => setCurrentCategory(category.name)} href='#'  >
+                <Link alt="link" to={category.name} className={`py-5 px-5 hover:bg-lightgray hover:text-royal rounded ${currentCategory == category.name && 'text-beige'}`} onClick={() => setCurrentCategory(category.name)}>
                 {capitalizeFirstLetter(category.name)}
-                </a>
+                </Link>
               </li>
             ))}
              

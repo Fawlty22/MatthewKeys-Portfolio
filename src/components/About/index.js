@@ -6,24 +6,23 @@ return (
   
       <section id="about" className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-charcoal">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi, I'm Matt.
             <br className="hidden lg:inline-block" />I am a new full-stack developer.
           </h1>
-          <p className="mb-8 text-royal leading-relaxed">
-          I leave power, good. Thank you... thank you.  Taxes, they'll be lower. The democratic vote is the right thing to do Philadelphia...so do.
-          </p>
+          <p className="mb-8 text-charcoal leading-relaxed">
+          I currently reside in Utah, where I am finishing up school to become a professional full-stack developer. I am excited to enter a new industry and further develop my new skills. Please feel free to contact me by pressing the button below.  You can also find my LinkedIn, Github, and StackOverflow linked at the bottom of the page.       </p>
           <div className="flex justify-center">
             <a
               href="#contact"
               onClick={() => setCurrentCategory('contact')}
-              className="inline-flex text-charcoal bg-sky border-0 py-2 px-6 focus:outline-none hover:text-royal hover:bg-lightgray rounded text-lg">
+              className="inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:text-royal hover:bg-lightgray rounded text-lg">
               Work With Me
             </a>
             <a
               href="#projects"
               onClick={() => setCurrentCategory('projects')}
-              className="ml-4 inline-flex text-charcoal bg-sky border-0 py-2 px-6 focus:outline-none hover:bg-lightgray hover:text-royal rounded text-lg">
+              className="ml-4 inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:bg-lightgray hover:text-royal rounded text-lg">
               See My Past Work
             </a>
           </div>

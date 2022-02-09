@@ -5,6 +5,8 @@ import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 function App() {
 
@@ -21,18 +23,19 @@ function App() {
     },
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0].name);
+  const [currentCategory, setCurrentCategory] = useState(categories[1].name);
 
 
 
   return (
-    <div id="app" className="bg-beige h-fit ">
+    <Router>
+    <div id="app" className="grad h-fit">
       <Header 
         categories={categories}
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       /> 
-      <main className=" bg-gray">
+      <main className=" bg-gray flex justify-center items-center">
         {currentCategory === 'about' &&   
         <About 
           categories={categories}
@@ -44,10 +47,11 @@ function App() {
         {currentCategory === 'contact' &&<Contact />}
         {currentCategory === 'resume' &&<Resume />}
         
-      
+      <Footer />
       </main>
-     <Footer />
+     
     </div>
+    </Router>
   );
 }
 

@@ -19,7 +19,7 @@ export default function Contact() {
           />
           <div className="bg-sky relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
-              <h2 className="title-font font-semibold text-red tracking-widest text-xs">
+              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 CURRENT LOCATION
               </h2>
               <p className="mt-1 text-charcoal">
@@ -27,13 +27,13 @@ export default function Contact() {
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-red tracking-widest text-xs">
+              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 EMAIL
               </h2>
               <a className="text-charcoal text-sm leading-relaxed">
                 Matthewjkeys22@gmail.com
               </a>
-              <h2 className="title-font font-semibold text-red tracking-widest text-xs mt-4">
+              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                 PHONE
               </h2>
               <p className=" text-charcoal leading-relaxed">631-626-2377</p>
@@ -44,11 +44,11 @@ export default function Contact() {
           netlify
           name="contact"
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-charcoal sm:text-4xl text-3xl mb-1 font-medium title-font">
+          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
             Hire Me
           </h2>
-          <p className="leading-relaxed text-royal mb-5">
-            I leave power, good. Thank you... thank you.  Taxes, they'll be lower. The democratic vote is the right thing to do Philadelphia...so do.
+          <p className="leading-relaxed text-charcoal mb-5">
+             I am currently looking for full-time employment. I will respond to any inquiries as soon as possible.  
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-charcoal">
