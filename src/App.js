@@ -16,9 +16,11 @@ function App() {
     },
     {
       name: 'about'
-    },{
+    },
+    {
       name: 'resume'
-    },{
+    },
+    {
       name: 'contact'
     },
   ]);

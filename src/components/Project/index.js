@@ -39,8 +39,4 @@ export default function Project({ name, link, homepage }) {
   );
 }
 
-{
-  /* <div className="text-charcoal flex">
-        <span className="pt-1 ml-2 font-bold text-xl ">{name}</span>
-      </div> */
-}
+
