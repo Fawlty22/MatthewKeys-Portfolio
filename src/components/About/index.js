@@ -8,7 +8,7 @@ return (
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi, I'm Matt.
-            <br className="hidden lg:inline-block" />I am a new full-stack developer.
+            <br className="hidden lg:inline-block" /> I am a new full-stack developer.
           </h1>
           <p className="mb-8 text-charcoal leading-relaxed">
           I currently reside in Utah, where I am finishing up school to become a professional full-stack developer. I am excited to enter a new industry and further develop my new skills. Please feel free to contact me by pressing the button below.  You can also find my LinkedIn, Github, and StackOverflow linked at the bottom of the page.       </p>
