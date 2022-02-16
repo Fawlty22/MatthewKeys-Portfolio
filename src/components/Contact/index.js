@@ -34,12 +34,13 @@ export default function Contact() {
    const name = target.name
 
    setFormText({
+    ...formText,
      [name]: value
    })
   };
   
 
-
+console.log(formText)
 
   return (
     <section id="contact" className="relative">
