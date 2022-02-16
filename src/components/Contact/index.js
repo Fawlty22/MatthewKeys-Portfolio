@@ -1,6 +1,46 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
+import emailjs from '@emailjs/browser';
+
 
 export default function Contact() {
+  const [formText, setFormText] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_m36epug', 'template_2xowt16', form.current, 'user_12ZpMCPVwnZiTlICctKM0')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      setFormText({
+        name: "",
+        email: "",
+        message: ""
+      })
+  };
+
+  const handleFormChange = async (event) => {
+
+   const target = event.target
+   const value = target.value
+   const name = target.name
+
+   setFormText({
+    ...formText,
+     [name]: value
+   })
+  };
+  
+
+console.log(formText)
 
   return (
     <section id="contact" className="relative">
@@ -41,6 +81,8 @@ export default function Contact() {
           </div>
         </div>
         <form
+          ref={form} 
+          onSubmit={sendEmail}
           netlify
           name="contact"
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
@@ -56,8 +98,10 @@ export default function Contact() {
             </label>
             <input
               type="text"
+              value={formText.name}
               id="name"
               name="name"
+              onChange={handleFormChange}
               className="w-full bg-sky rounded border border-charcoal focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -66,9 +110,11 @@ export default function Contact() {
               Email
             </label>
             <input
+            value={formText.email}
               type="email"
               id="email"
               name="email"
+              onChange={handleFormChange}
               className="w-full bg-sky rounded border border-charcoal focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -79,14 +125,18 @@ export default function Contact() {
               Message
             </label>
             <textarea
+              value={formText.message}
+              onChange={handleFormChange}
               id="message"
               name="message"
               className="w-full bg-sky rounded border border-charcoal focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-white py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             />
           </div>
           <button
+          
             type="submit"
             className="text-sky bg-charcoal border-0 py-2 px-6 focus:outline-none hover:bg-lightgray hover:text-royal rounded text-lg">
+            
             Submit
           </button>
         </form>
