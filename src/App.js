@@ -8,6 +8,7 @@ import Resume from "./components/Resume";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
+
 function App() {
 
   const [categories] = useState([
@@ -32,12 +33,14 @@ function App() {
   return (
     <Router>
     <div id="app" className="grad h-fit">
+      
       <Header 
         categories={categories}
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       /> 
-      <main className=" bg-gray flex justify-center items-center">
+      <main className="bg-gray flex justify-center items-center">
+
         {currentCategory === 'about' &&   
         <About 
           categories={categories}
