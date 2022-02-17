@@ -1,6 +1,6 @@
 # Personal Portfolio Using REACT
   
-  ![Screenshot]('src/assets/images/screenshot.png/')
+  ![Screenshot]('./src/assets/images/screenshot.png/')
 
   ## **Table of Contents**
   * [Description](#description)
