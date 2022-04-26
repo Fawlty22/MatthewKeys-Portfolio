@@ -23,9 +23,9 @@ import { Redirect } from 'react-router-dom'
   // console.log(data)
 
   // let reposWeLike = [ 'Chatterstorm', 'Pawgers', 'FlightPlan', 'photo-port', 'MatthewKeys', '']
-  let reposWeLike = [ 'Pawgers', 'FlightPlan', 'DeepThoughts', 'PhotoPort', 'Shop-Shop', 'Chatterstorm' ]
+  let reposWeLike = [ 'Pawgers', 'FlightPlan', 'DeepThoughts', 'PhotoPort', 'skiHaus', 'Chatterstorm' ]
 
-
+  let reversedProjectFetch = projectFetch.slice(0).reverse()
 
   return (
     <section id="projects" className="text-white bg-gray body-font h-full">
@@ -43,7 +43,7 @@ import { Redirect } from 'react-router-dom'
 
         ">
           {galleryLoading && <h2 className='text-sky font-medium'>LOADING... </h2>}
-        {projectFetch.map((repo) => (
+        {reversedProjectFetch.map((repo) => (
           reposWeLike.includes(repo.name) && 
          <Project 
             name={repo.name}
