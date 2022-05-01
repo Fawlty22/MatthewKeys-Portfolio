@@ -33,10 +33,10 @@ import { Redirect } from 'react-router-dom'
         <div className="flex flex-col rounded w-full mb-10">
           
           <h1 className="sm:text-3xl text-2xl my-5 font-bold text-white title-font mb-4">
-            Projects I've Built
+            Projects
           </h1>
           <p className="lg:w-2/3 mx-auto text-lg leading-relaxed text-charcoal text-base">
-            Here is a selection of projects I've built during my bootcamp.
+            Here is a selection of projects I've built. Hover over one to reveal links to the live application and GitHub. 
           </p>
         </div>
         <div className="flex flex-wrap w-full justify-center bg-charcoal 

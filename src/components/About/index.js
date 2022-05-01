@@ -13,13 +13,15 @@ return (
             <br className="hidden lg:inline-block" /> I am a new full-stack developer.
           </h1>
           <p className="mb-8 text-charcoal leading-relaxed">
-          I currently reside in Utah, where I am finishing up school to become a professional full-stack developer. I am excited to enter a new industry and further develop my new skills. Please feel free to contact me by pressing the button below.  You can also find my LinkedIn, Github, and StackOverflow linked at the bottom of the page.       </p>
+          I currently reside in Utah, after recently receiving a certificate in Full Stack Web Development from the University of Utah. I am most familiar with the Javascript ES6+ and the MERN stack, though I do have experience with other technology stacks which you can find on my resume, linked above. 
+          I am excited to work with new people and further develop my new skills. <br /><br />
+          I'm an avid disc golfer and skier in my free time. If you're in the Park City, Utah area, I'd love to play a round or hit the slopes.  Potential future employers and new friends alike, please feel free to contact me by pressing the button below.  You can also find my LinkedIn, Github, and StackOverflow linked at the bottom of the page.       </p>
           <div className="flex justify-center">
             <a
               href="#contact"
               onClick={() => setCurrentCategory('contact')}
               className="inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:text-royal hover:bg-lightgray rounded text-lg">
-              Work With Me
+              Contact Me
             </a>
             <a
               href="#projects"
