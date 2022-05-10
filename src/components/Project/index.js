@@ -3,7 +3,7 @@ import React from "react";
 export default function Project({ name, link, homepage }) {
   return (
     <section
-      className="effect-container h-40 border border-charcoal overflow-hidden  w-full lg:w-6/12 md:w-4/12 mx-3 md:mx-0 lg:mx-0"
+      className="effect-container h-40 border border-charcoal overflow-hidden  xs:w-full "
     >
       <img
         className="w-full effect-image bg-cover"

@@ -39,7 +39,7 @@ function App() {
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       /> 
-      <main className="bg-gray flex justify-center items-center">
+      <main className="bg-gray h-full flex flex-wrap justify-center content-between">
 
         {currentCategory === 'about' &&   
         <About 

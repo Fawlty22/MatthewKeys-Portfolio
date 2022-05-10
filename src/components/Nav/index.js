@@ -30,12 +30,12 @@ export default function Navbar({ categories, currentCategory, setCurrentCategory
               <li  className='py-3 px-2 nav-item' key={category.name}>
 
                 <Link
-                  className={`py-3 px-2 flex items-center text-lg  sm:p-1 md:p-1 font-bold leading-snug hover:bg-lightgray hover:text-royal rounded ${currentCategory == category.name && 'text-beige'}`} 
+                  className={`py-3 px-2 flex items-center text-lg sm:p-1 font-bold leading-snug hover:bg-lightgray hover:text-royal rounded ${currentCategory == category.name && 'text-beige'}`} 
                   alt="link" 
                   to={category.name}
                   onClick={() => setCurrentCategory(category.name)}
                 >
-                  <span className="ml-2 sm:text-sm md:text-sm">{capitalizeFirstLetter(category.name)}</span>
+                  <span className=" xs:text-sm ">{capitalizeFirstLetter(category.name)}</span>
 
                 </Link>
 
