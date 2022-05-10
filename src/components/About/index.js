@@ -20,13 +20,13 @@ return (
             <a
               href="#contact"
               onClick={() => setCurrentCategory('contact')}
-              className="inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:text-royal hover:bg-lightgray rounded text-lg">
+              className="inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:text-royal hover:bg-lightgray rounded text-lg items-center">
               Contact Me
             </a>
             <a
               href="#projects"
               onClick={() => setCurrentCategory('projects')}
-              className="ml-4 inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:bg-lightgray hover:text-royal rounded text-lg">
+              className="ml-4 inline-flex text-charcoal bg-beige border-0 py-2 px-6 focus:outline-none hover:bg-lightgray hover:text-royal rounded text-lg items-center">
               See My Past Work
             </a>
           </div>
