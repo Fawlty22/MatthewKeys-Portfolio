@@ -9,7 +9,7 @@ import { Redirect } from 'react-router-dom'
   const [galleryLoading, setGalleryLoading ] = useState(true)
 
   useEffect(()=> {
-    fetch('https://api.github.com/users/fawlty22/repos')
+    fetch('https://api.github.com/users/fawlty22/repos?per_page=100')
         .then(function (response) {
           return response.json()
         })
