@@ -40,7 +40,7 @@ import { Redirect } from 'react-router-dom'
         <div className="flex flex-wrap w-full justify-center bg-gray 
 
         ">
-          {galleryLoading && <h2 className='text-sky font-medium'>LOADING... </h2>}
+          {galleryLoading && <h2 className='text-charcoal bg-beige font-medium'>LOADING... </h2>}
         {reversedProjectFetch.map((repo) => (
           reposWeLike.includes(repo.name) && 
          <Project
